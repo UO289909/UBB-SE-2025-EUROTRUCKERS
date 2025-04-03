@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System;
 using UBB_SE_2025_EUROTRUCKERS.Services;
 
-namespace TransportManagement.Services;
+namespace UBB_SE_2025_EUROTRUCKERS.Services;
 
 public class DialogService : IDialogService
 {

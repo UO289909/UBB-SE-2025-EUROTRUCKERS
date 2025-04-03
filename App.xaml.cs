@@ -6,12 +6,10 @@ using Microsoft.EntityFrameworkCore;
 using LaunchActivatedEventArgs = Microsoft.UI.Xaml.LaunchActivatedEventArgs;
 using UBB_SE_2025_EUROTRUCKERS.Services;
 using UBB_SE_2025_EUROTRUCKERS.ViewModels;
-using TransportManagement.Views;
+using UBB_SE_2025_EUROTRUCKERS.Views;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Hosting;
-using Microsoft.UI.Xaml.Controls;
 using System.Diagnostics;
-using TransportManagement.Services;
 using System.Threading.Tasks;
 
 // To learn more about WinUI, the WinUI project structure,

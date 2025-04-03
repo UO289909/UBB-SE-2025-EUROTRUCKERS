@@ -1,15 +1,24 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
+﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.Extensions.DependencyInjection;
 using UBB_SE_2025_EUROTRUCKERS.ViewModels;
+using UBB_SE_2025_EUROTRUCKERS.Views;
+using UBB_SE_2025_EUROTRUCKERS.ViewModels;
+using UBB_SE_2025_EUROTRUCKERS;
 
 namespace UBB_SE_2025_EUROTRUCKERS.Views
 {
-    public MainWindow()
+    public sealed partial class MainWindow : Window
     {
-        this.InitializeComponent();
-        this.DataContext = App.Services.GetRequiredService<MainViewModel>();
+        public MainViewModel ViewModel { get; }
 
-        // Navegación inicial (opcional)
-        MainContent.Navigate(typeof(DeliveriesView));
+        public MainWindow()
+        {
+            this.InitializeComponent();
+
+            // Obtener ViewModel del contenedor DI
+            ViewModel = App.Services.GetRequiredService<MainViewModel>();
+
+        }
     }
 }
