@@ -20,7 +20,7 @@ CREATE SCHEMA transport;
 
 -- Companies table
 CREATE TABLE transport.companies (
-    comapany_id SERIAL PRIMARY KEY,
+    company_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     address TEXT NOT NULL,
     phone VARCHAR(20),
@@ -69,10 +69,3 @@ CREATE TABLE transport.deliveries (
     total_distance_km DECIMAL(10, 2),
     fee_euros DECIMAL(10, 2),
 );
-
--- Create an specific user for the app
-CREATE ROLE transport_app LOGIN PASSWORD 'admin';
-GRANT CONNECT ON DATABASE transport_dev TO transport_app;
-GRANT USAGE ON SCHEMA transport TO transport_app;
-GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA transport TO transport_app;
-GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA transport TO transport_app;
