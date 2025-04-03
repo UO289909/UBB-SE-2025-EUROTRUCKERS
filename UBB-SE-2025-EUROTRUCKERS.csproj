@@ -13,9 +13,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Remove="Assets\background.jpg" />
     <None Remove="Database\mock_data.sql" />
     <None Remove="Database\schema.sql" />
   </ItemGroup>
@@ -56,6 +54,11 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.250310001" />
     <PackageReference Include="Npgsql" Version="9.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Update="Views\DeliveriesView.xaml">
