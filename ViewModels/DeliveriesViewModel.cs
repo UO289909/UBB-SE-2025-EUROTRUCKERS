@@ -4,6 +4,8 @@ using UBB_SE_2025_EUROTRUCKERS.Models;
 using UBB_SE_2025_EUROTRUCKERS.Services;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Linq;
+using System;
 
 namespace UBB_SE_2025_EUROTRUCKERS.ViewModels
 {
@@ -33,17 +35,41 @@ namespace UBB_SE_2025_EUROTRUCKERS.ViewModels
 
         private async Task LoadDeliveriesAsync()
         {
+            if (IsBusy)
+                return;
+
             IsBusy = true;
             try
             {
-                var deliveries = await _deliveryService.GetActiveDeliveriesAsync();
-                Deliveries = new ObservableCollection<Delivery>(deliveries);
+                var deliveries = await _deliveryService.GetAllDeliveriesAsync();
+
+                if (deliveries == null || !deliveries.Any())
+                {
+                    Console.WriteLine("No deliveries found.");
+                }
+                else
+                {
+                    Console.WriteLine($"Found {deliveries.Count()} deliveries.");
+                }
+
+                Deliveries.Clear();
+                foreach (var delivery in deliveries)
+                {
+                    Deliveries.Add(delivery);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading deliveries: {ex.Message}");
             }
             finally
             {
                 IsBusy = false;
             }
         }
+
+
+
 
         private void NavigateToDetails(Delivery delivery)
         {

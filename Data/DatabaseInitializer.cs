@@ -62,7 +62,7 @@ namespace UBB_SE_2025_EUROTRUCKERS.Data
 
                     // Ejecutar schema.sql
                     var schemaScript = await File.ReadAllTextAsync(_schemaScriptPath);
-                    Console.WriteLine("Executing schema script...";
+                    Console.WriteLine("Executing schema script...");
                     await ExecuteScriptAsync(connection, schemaScript);
 
                     // Ejecutar mock_data.sql
