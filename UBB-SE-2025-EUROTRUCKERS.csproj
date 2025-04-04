@@ -27,6 +27,9 @@
     <None Remove="Database\schema.sql" />
     <None Remove="Views\MainWindow.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Page Remove="maprouting\MapUI.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Database\mock_data.sql">
@@ -66,6 +69,11 @@
     <Content Update="Assets\background.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="MapRouting\MapUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\DeliveriesView.xaml">

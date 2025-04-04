@@ -1,0 +1,7 @@
+<StackPanel>
+    <Button Content="Show Route" Click="OnShowRouteClicked" Margin="10"/>
+    <MapControl x:Name="MyMap"
+                Height="400"
+                ZoomLevel="12"
+                MapServiceToken="Your_Map_Token_Here"/>
+</StackPanel>
