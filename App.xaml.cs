@@ -1,16 +1,16 @@
 ﻿using System;
 using Microsoft.UI.Xaml;
 using Microsoft.Extensions.DependencyInjection;
-using UBB_SE_2025_EUROTRUCKERS.Data;
 using Microsoft.EntityFrameworkCore;
 using LaunchActivatedEventArgs = Microsoft.UI.Xaml.LaunchActivatedEventArgs;
-using UBB_SE_2025_EUROTRUCKERS.Services;
 using UBB_SE_2025_EUROTRUCKERS.ViewModels;
 using UBB_SE_2025_EUROTRUCKERS.Views;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Hosting;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using UBB_SE_2025_EUROTRUCKERS.Services;
+using UBB_SE_2025_EUROTRUCKERS.Data;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.

@@ -1,10 +1,10 @@
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Navigation;
-using UBB_SE_2025_EUROTRUCKERS.Models;
 using Microsoft.UI.Xaml;
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using UBB_SE_2025_EUROTRUCKERS.ViewModels;
+using UBB_SE_2025_EUROTRUCKERS.Models;
 
 namespace UBB_SE_2025_EUROTRUCKERS.Views
 {

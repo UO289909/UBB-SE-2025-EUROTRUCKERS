@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using UBB_SE_2025_EUROTRUCKERS.Models;
-using UBB_SE_2025_EUROTRUCKERS.Services;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System;
+using UBB_SE_2025_EUROTRUCKERS.Services;
+using UBB_SE_2025_EUROTRUCKERS.Models;
 
 namespace UBB_SE_2025_EUROTRUCKERS.ViewModels
 {
