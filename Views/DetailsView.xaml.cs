@@ -10,7 +10,19 @@ namespace UBB_SE_2025_EUROTRUCKERS.Views
 {
     public sealed partial class DetailsView : Page
     {
-        public Delivery SelectedDelivery { get; set; }
+        public static readonly DependencyProperty SelectedDeliveryProperty =
+            DependencyProperty.Register(
+                nameof(SelectedDelivery),
+                typeof(Delivery),
+                typeof(DetailsView),
+                new PropertyMetadata(null, OnSelectedDeliveryChanged));
+
+        public Delivery SelectedDelivery
+        {
+            get => (Delivery)GetValue(SelectedDeliveryProperty);
+            set => SetValue(SelectedDeliveryProperty, value);
+        }
+
         public DetailsViewModel ViewModel { get; }
 
         public DetailsView()
@@ -20,12 +32,19 @@ namespace UBB_SE_2025_EUROTRUCKERS.Views
             this.DataContext = ViewModel;
         }
 
+        private static void OnSelectedDeliveryChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is DetailsView view && e.NewValue is Delivery delivery)
+            {
+                view.ViewModel.SelectedDelivery = delivery;
+            }
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (e.Parameter is Delivery delivery)
             {
                 SelectedDelivery = delivery;
-                ViewModel.SelectedDelivery = delivery;
             }
         }
 

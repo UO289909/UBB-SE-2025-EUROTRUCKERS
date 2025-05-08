@@ -52,6 +52,7 @@ namespace UBB_SE_2025_EUROTRUCKERS
             services.AddSingleton<INavigationService, NavigationService>();
             services.AddTransient<IDeliveryService, DeliveryService>();
             services.AddSingleton<IDialogService, DialogService>();
+            services.AddSingleton<ILoggingService, LoggingService>();
             services.AddLogging(configure => configure.AddDebug());
 
             // 4. Repositories
