@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UBB_SE_2025_EUROTRUCKERS.Data;
 using UBB_SE_2025_EUROTRUCKERS.Models;
+using Xunit;
 
 namespace UBB_SE_2025_EUROTRUCKERS.Tests
 {
