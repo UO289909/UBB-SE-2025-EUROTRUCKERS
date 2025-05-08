@@ -20,17 +20,12 @@ namespace UBB_SE_2025_EUROTRUCKERS.Views
             this.DataContext = ViewModel;
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (e.Parameter is Delivery delivery)
             {
                 SelectedDelivery = delivery;
-                this.DataContext = SelectedDelivery;
+                ViewModel.SelectedDelivery = delivery;
             }
         }
 
@@ -38,7 +33,6 @@ namespace UBB_SE_2025_EUROTRUCKERS.Views
         {
             Frame.GoBack();
         }
-
     }
 }
 
